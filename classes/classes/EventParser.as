@@ -338,16 +338,17 @@ public class EventParser {
         if (player.armor is LustyMaidensArmor || player.armor is SuccubusArmor || player.armor is BattleMaidenArmor) {
             //Removal due to no longer fitting:
             //Grew Cock or Balls
-            if ((player.hasCock() && !player.hasSheath()) || player.hasBalls()) {
-                EngineCore.outputText("\nYou fidget uncomfortably in the g-string of your lewd bikini - there simply isn't enough room for your ");
-                if (player.hasCock()) EngineCore.outputText("maleness");
-                else EngineCore.outputText("bulgy balls");
-                EngineCore.outputText(" within the imprisoning leather, and it actually hurts to wear it.  <b>You'll have to find some other form of protection!</b>\n\n");
-                SceneLib.inventory.takeItem(player.unequipArmor(), playerMenu);
-                return true;
-            }
+            //if ((player.hasCock() && !player.hasSheath()) || player.hasBalls()) {
+            //    EngineCore.outputText("\nYou fidget uncomfortably in the g-string of your lewd bikini - there simply isn't enough room for your ");
+            //    if (player.hasCock()) EngineCore.outputText("maleness");
+            //    else EngineCore.outputText("bulgy balls");
+            //    EngineCore.outputText(" within the imprisoning leather, and it actually hurts to wear it.  <b>You'll have to find some other form of protection!</b>\n\n");
+            //    SceneLib.inventory.takeItem(player.unequipArmor(), playerMenu);
+            //    return true;
+            //}
             //Lost pussy
-            else if (!player.hasVagina()) {
+            //else
+            if (!player.hasVagina()) {
                 EngineCore.outputText("\nYou fidget uncomfortably as the crease in the gusset of your lewd bikini digs into your sensitive, featureless loins.  There's simply no way you can continue to wear this outfit in comfort - it was expressly designed to press in on the female mons, and without a vagina, <b>you simply can't wear this exotic armor.</b>\n\n");
                 SceneLib.inventory.takeItem(player.unequipArmor(), playerMenu);
                 return true;
